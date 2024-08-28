@@ -4,7 +4,7 @@ import _, { isEmpty } from "lodash";
 import { isNullOrUndefined } from "util";
 import { CONSTANTS_TABLE_NAME } from "./db_constants";
 
-AWS.config.update({ region: "ap-south-1", accessKeyId: "AKIAYNF7T5IKNIR2MNPJ", secretAccessKey: "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" });
+AWS.config.update({ region: "ap-south-1", accessKeyId: "", secretAccessKey: "//vi" });
 
 const documentClient = new AWS.DynamoDB.DocumentClient();
 
@@ -12,8 +12,8 @@ const documentClient = new AWS.DynamoDB.DocumentClient();
 
 export async function GetConstantValue(key: string) {
   const options: GetItemInput = {
-      Key: { key: key },
-      TableName: CONSTANTS_TABLE_NAME,
+    Key: { key: key },
+    TableName: CONSTANTS_TABLE_NAME,
   } as any;
   return documentClient.get(options).promise();
 }
