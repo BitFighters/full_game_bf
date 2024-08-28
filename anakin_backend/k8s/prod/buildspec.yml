@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      # Build tags
+      - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$ENV"'@' k8s/dev/deployment.yml
+
+      # Retrieve an authentication token and authenticate your docker client to ecr
+      - docker login -u $dockerhub_username -p $dockerhub_password
+      # Login to ECR Registry for docker to push the image to ECR Repository
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+    on-failure: ABORT
+
+  build:
+    commands:
+      # Create a docker image
+      - docker build -t anakin:$ENV -f k8s/Dockerfile .
+    on-failure: ABORT
+
+  post_build:
+    commands:
+      # Push to ECR
+      - echo "Push to ECR..."
+      - docker tag anakin:$ENV $REPOSITORY_URI:$ENV
+      - docker push $REPOSITORY_URI:$ENV
+
+      # Setup kubectl and apply
+      - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME
+      - kubectl apply -f k8s/prod/deployment.yml
+      # - kubectl rollout restart deployment/anakin

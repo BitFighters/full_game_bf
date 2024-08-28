@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .cards {
+    position: relative;
+    display: block;
+  }
+
+  .slime-img {
+    z-index: 5;
+  }
+}

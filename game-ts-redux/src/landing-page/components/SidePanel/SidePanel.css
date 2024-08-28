@@ -1,0 +1,87 @@
+.side-panel {
+  height: 323px;
+  width: 169px;
+  background-image: url("../../../assets/images/side-panel-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Cooper Black";
+  border-left: 1px solid #433e3c;
+  transform: translateX(-2px);
+}
+.side-panel__layer {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../../assets/images/side-panel-bg-layer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.side-panel__inner {
+  padding: 28px 5px 10px 5px;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.side-panel__inner img {
+  width: 100%;
+  height: 100%;
+}
+.side-panel__inner div {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+}
+.side-panel__inner .sidePanel-disabled {
+  background-image: url("../../../assets/images/work/Mint_Panel__0003_spareBTN.png");
+}
+.side-panel__inner .sidePanel-drip {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0009_Drip-Fighter.png");
+}
+.side-panel__inner .sidePanel-drip:hover {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0010_Drip-Fighter-copy.png");
+}
+.side-panel__inner .sidePanel-drip:active {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0011_Drip-Fighter.png");
+}
+.side-panel__inner .presale-state-active {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0011_Drip-Fighter.png");
+}
+.side-panel__inner .sidePanel-bit {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0006_Bit-Fighter.png");
+}
+.side-panel__inner .sidePanel-bit:hover {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0007_Bit-Fighter.png");
+}
+.side-panel__inner .sidePanel-bit:active {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0008_Bit-Fighter.png");
+}
+.side-panel__inner .drippresale-state-active {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0008_Bit-Fighter.png");
+}
+.side-panel__inner .sidePanel-oneclub {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0000_The-1K-Club.png");
+}
+.side-panel__inner .sidePanel-oneclub:hover {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0001_The-1K-Club.png");
+}
+.side-panel__inner .sidePanel-oneclub:active {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0002_The-1K-Club.png");
+}
+.side-panel__inner .oneclub-state-active {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0002_The-1K-Club.png");
+}
+.side-panel__inner .sidePanel-refrink {
+  margin-top: 35px;
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0003_Copy-Ref-Link.png");
+}
+.side-panel__inner .sidePanel-refrink:hover {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0004_Copy-Ref-Link.png");
+}
+.side-panel__inner .sidePanel-refrink:active {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0005_Copy-Ref-Link.png");
+}
+.side-panel__inner .refrink-state-active {
+  background-image: url("../../../assets/images/work/Mint_Panel__0004s_0005_Copy-Ref-Link.png");
+}/*# sourceMappingURL=SidePanel.css.map */

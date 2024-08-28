@@ -1,0 +1,14 @@
+@import './includes/variables';
+@import './includes/global-styles';
+@import './includes/mixins';
+
+@import './components/navigation-bar';
+@import './components/footer';
+@import './components/social-links';
+@import './components/primary-btn';
+@import './components/divider';
+@import './components/faq';
+
+@import './pages/landing-page';
+@import './pages/leaderboard-page';
+@import './pages/other-page';

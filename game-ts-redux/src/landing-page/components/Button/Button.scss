@@ -1,0 +1,59 @@
+@import "../../../assets/sass/mixins";
+@import "../../../assets/sass/variables";
+
+.btn-mint {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  height: 48px;
+  width: 154px;
+  border: 6px solid transparent;
+  border-image: url("../../../assets/images/btn-border.png") 5 / 7px round;
+
+  @include flexcenter;
+  font-family: "Cooper Black";
+  cursor: pointer;
+  transition: all 0.1s linear;
+  span {
+    transition: all 0.1s linear;
+    color: $white;
+    line-height: 1;
+    word-break: keep-all;
+    text-shadow: -2px 2px #000;
+  }
+  &--red {
+    background-color: $red;
+    &:hover {
+      background-color: #931919;
+    }
+  }
+  &--dark {
+    background-color: $dark;
+    &:hover {
+      background-color: #1e1e1e;
+    }
+  }
+  &--grey {
+    background-color: $grey;
+    // &:hover {
+    //   background-color: #505050;
+    // }
+  }
+  &--lightgray {
+    background-color: $light-gray;
+    &:hover {
+      background-color: #505050;
+    }
+  }
+  &--big {
+    font-size: 32px;
+    width: 180px;
+  }
+  &--small {
+    font-size: 19px;
+  }
+  &:active {
+    background-color: #931919;
+  }
+}

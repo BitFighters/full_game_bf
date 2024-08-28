@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anakin
+  namespace: default
+  labels:
+    app: anakin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anakin
+  template:
+    metadata:
+      labels:
+        app: anakin
+    spec:
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: anakin-api
+
+      containers:
+        - name: anakin
+          image: 578074962452.dkr.ecr.ap-south-1.amazonaws.com/anakin:latest
+          imagePullPolicy: Always
+          # args: ["-debug"]
+          env:
+            - name: ENVIRONMENT
+              value: "production"
+            - name: NODE_ENV
+              value: "production"
+            - name: APP_PORT
+              value: "3000"
+            - name: MY_POD_IP
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: status.podIP
+          ports:
+            - name: http
+              containerPort: 80
+          # resources:
+          #   requests:
+          #     memory: 8000Mi
+          #     cpu: 3000m
+          #     nvidia.com/gpu: 1
+          #   limits:
+          #     nvidia.com/gpu: 1
+          #     memory: 8000Mi
+          #     cpu: 3000m
+          volumeMounts:
+            - name: anakin-log
+              mountPath: /var/loco/logs/
+      volumes:
+        - name: anakin-log
+          emptyDir: {}
+
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: anakin
+#   namespace: default
+#   annotations:
+#     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
+#     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ap-south-1:418915376963:certificate/ca96c082-d821-4dea-8f2c-80efb883ec1d
+#     service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
+# spec:
+#   selector:
+#     app: anakin
+#   type: LoadBalancer
+#   ports:
+#     - name: http
+#       port: 80
+#       targetPort: 80
+#     - name: https
+#       port: 443
+#       targetPort: 80

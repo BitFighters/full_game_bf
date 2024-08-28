@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      # build tags
+      - TAG="$ENVIRONMENT.$(date +%Y-%m-%d.%H.%M.%S)"
+      - sed -i 's@BITS_SERVER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' k8s/dev/definition.yml
+
+      # retrieve an authentication token and authenticate your docker client to ecr
+      - docker login -u $dockerhub_username -p $dockerhub_password
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+    on-failure: ABORT
+
+  build:
+    commands:
+      # Create a docker image
+      - docker build -t bits-server .
+    on-failure: ABORT
+
+  post_build:
+    commands:
+      # push to ecr
+      - docker tag dev-bits-server-repo:latest $REPOSITORY_URI:$TAG
+      - docker push $REPOSITORY_URI:$TAG
+
+      # setup kubectl and apply
+      - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME
+      - kubectl apply -f k8s/dev/definition.yml

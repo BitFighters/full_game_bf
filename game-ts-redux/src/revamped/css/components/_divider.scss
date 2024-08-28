@@ -1,0 +1,95 @@
+.divider-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+
+  .floor-wall {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(rgba(4, 10, 22, 0.1), rgba(4, 10, 22, 0.1)), url('./images/tile.webp');
+    background-repeat: repeat;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      height: 25px;
+    }
+  }
+
+  .base-wall {
+    transform: scaleY(-1);
+    width: 100%;
+    height: 35px;
+    background: linear-gradient(rgba(4, 10, 22, 0.95), rgba(4, 10, 22, 0.5)), url('./images/tile.webp');
+    background-repeat: repeat;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+
+    @media only screen and (max-width: 768px) {
+      height: 20px;
+      clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  .hanging-light {
+    width: 435px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      width: 350px;
+    }
+
+    .hangers {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+
+      .hanger {
+        width: 8px;
+        height: 75px;
+        background: linear-gradient(rgba(4, 10, 22, 0.95), rgba(4, 10, 22, 0.35)), url('./images/tile.webp');
+        background-repeat: repeat;
+
+        @media only screen and (max-width: 768px) {
+          height: 50px;
+        }
+      }
+    }
+
+    .hanging-light-top-part {
+      width: 90%;
+      height: 20px;
+      background: linear-gradient(rgba(4, 10, 22, 0.25), rgba(4, 10, 22, 0.75)), url('./images/tile.webp');
+      background-repeat: repeat;
+    }
+
+    .hanging-light-bottom-part {
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(rgba(4, 10, 22, 0.25), rgba(4, 10, 22, 0.75)), url('./images/tile.webp');
+      background-repeat: repeat;
+    }
+
+    .light {
+      width: 110%;
+      height: 170px;
+      background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.35) 4.69%, rgba(255, 255, 255, 0) 100%);
+      clip-path: polygon(12% 0%, 88% 0%, 100% 100%, 0% 100%);
+      animation: hangingLight 1s linear infinite;
+
+      @keyframes hangingLight {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

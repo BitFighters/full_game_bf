@@ -1,0 +1,15 @@
+export enum WALLET_LOGS_GROUP {
+  FIGHT_BET = "Fight Bet",
+  FIGHT_WIN = "Fight Win",
+  JACKPOT_WIN = "JackPot Win",
+  FIGHT_DIFF_RETURN = "Fight Bet differnece",
+  // FIGHT_REFUND= 'Fight Refund',
+  BET_REFUND = "Fight Bet Refund",
+  FIGHT_REFUND = "Fight Refund",
+  FIGHT_BET_WIN = "Fight Bet Win",
+  BREW = "Bought Brew",
+  GANG = "Gang",
+  ATM_DEPOSIT = "Atm Deposit",
+  ATM_WITHDRAWAL = "Atm Withdrawal",
+  BET = "Bet",
+}

@@ -1,0 +1,25 @@
+apiVersion: metrics.aws/v1alpha1
+kind: ExternalMetric
+metadata:
+  name: cosmos-latency
+  namespace: default
+spec:
+  name: cosmos-latency
+  queries:
+    - id: cosmos_latency
+      metricStat:
+        metric:
+          dimensions:
+            - name: LoadBalancer
+              value: app/k8s-default-liu-a8182d5606/93d40eda82698d50
+            - name: TargetGroup
+              value: targetgroup/k8s-default-cosmos-023331bc3c/98e3fb7975d10704
+          metricName: TargetResponseTime
+          namespace: AWS/ApplicationELB
+        period: 60
+        stat: Average
+        unit: Seconds
+      returnData: false
+    - expression: cosmos_latency * 1000
+      id: cosmos_latency_ms
+      returnData: true

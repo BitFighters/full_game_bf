@@ -1,0 +1,16 @@
+.social-links-component {
+  display: flex;
+  gap: 18px;
+
+  a {
+    display: flex;
+
+    svg path {
+      transition: all 0.2s ease;
+    }
+
+    &:hover svg path {
+      fill: #c86c05;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+.mint-card__form {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-top: 10px;
+}
+.mint-card__form__title {
+  margin-bottom: 5px;
+  margin-left: 2px;
+  height: 24px;
+  border: 1px solid #b9c1c6;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mint-card__form__title span {
+  font-size: 22px;
+  color: #363636;
+}
+.mint-card__form__item {
+  position: relative;
+  z-index: 100;
+}
+.mint-card__form__item .red {
+  margin: 0;
+  margin: 0 0 3px 5px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+.mint-card__form__item label {
+  font-size: 22px;
+  color: #363636;
+}
+.mint-card__form__item input[type=text] {
+  padding: 0;
+  padding-left: 3px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  border-bottom: 3px solid #363636;
+  max-width: 200px;
+  text-align: center;
+  font-family: "Cooper Black";
+  font-size: 16px;
+  color: #363636;
+}
+.mint-card__form__item input[type=number] {
+  padding: 0;
+  padding-left: 3px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  border-bottom: 3px solid #363636;
+  max-width: 40px;
+  text-align: center;
+  font-family: "Cooper Black";
+  font-size: 14px;
+  color: #363636;
+}
+.mint-card__form__item .red {
+  color: #ae0606;
+}
+.mint-card__form__item--center {
+  text-align: center;
+}
+.mint-card__form__item--radio:last-child {
+  position: absolute;
+  bottom: 70px;
+}
+.mint-card__form__item--radio {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 3px;
+}
+.mint-card__form__item--radio .haveone-select, .mint-card__form__item--radio .driptag-select, .mint-card__form__item--radio .driptatoo-select, .mint-card__form__item--radio .addboth-select {
+  display: flex;
+  width: 100%;
+}
+.mint-card__form__item--radio .radio_dripTag {
+  background-image: url("../../../assets/images/work/Mint_Panel__0001s_0000_select.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  margin: 2px 0 0 10px;
+}
+.mint-card__form__item--radio .radio_dripTag:hover {
+  background-image: url("../../../assets/images/work/Mint_Panel__0001s_0001_select_hover.png");
+}
+.mint-card__form__item--radio .radio_dripTag:active {
+  background-image: url("../../../assets/images/work/Mint_Panel__0001s_0002_selected.png");
+}
+.mint-card__form__item--radio .radio_dripTag_selected {
+  background-repeat: no-repeat;
+  width: 50px;
+  margin: 2px 0 0 10px;
+  background-image: url("../../../assets/images/work/Mint_Panel__0001s_0002_selected.png");
+}
+.mint-card__form__item--radio .radio_dripTag_inactive {
+  background-repeat: no-repeat;
+  width: 50px;
+  margin: 2px 0 0 10px;
+  background-color: grey;
+  border-radius: 30px;
+}
+.mint-card__form__item--radio .radio_dripTag_active {
+  background-repeat: no-repeat;
+  width: 50px;
+  margin: 2px 0 0 10px;
+  background-image: url("../../../assets/images/work/Mint_Panel__0001s_0002_selected.png");
+}
+.mint-card__form__item--radio label {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+}
+.mint-card__form__item--radio .slightly_bigger_label {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+}
+.mint-card__form__item--radio .slightly_smaller_label {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+}
+.mint-card__form__item--radio .radio-circle {
+  display: block;
+  margin-left: 2px;
+  height: 15px;
+  width: 15px;
+  border: 3px solid #363636;
+  border-radius: 50%;
+}
+.mint-card__form__item--radio .checkbox-circle {
+  display: block;
+  height: 15px;
+  width: 15px;
+  border: 3px solid #363636;
+  border-radius: 50%;
+}
+.mint-card__form__item--radio input[type=radio]:checked ~ .radio-circle {
+  background-color: #363636;
+}
+
+#code {
+  text-align: left !important;
+}/*# sourceMappingURL=MintCardForm.css.map */

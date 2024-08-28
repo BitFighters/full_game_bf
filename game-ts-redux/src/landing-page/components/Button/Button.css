@@ -1,0 +1,55 @@
+.btn-mint {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  height: 48px;
+  width: 154px;
+  border: 6px solid transparent;
+  -o-border-image: url("../../../assets/images/btn-border.png") 5/7px round;
+     border-image: url("../../../assets/images/btn-border.png") 5/7px round;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cooper Black";
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.btn-mint span {
+  transition: all 0.1s linear;
+  color: #f9f9f9;
+  line-height: 1;
+  word-break: keep-all;
+  text-shadow: -2px 2px #000;
+}
+.btn-mint--red {
+  background-color: #b9330d;
+}
+.btn-mint--red:hover {
+  background-color: #931919;
+}
+.btn-mint--dark {
+  background-color: #363636;
+}
+.btn-mint--dark:hover {
+  background-color: #1e1e1e;
+}
+.btn-mint--grey {
+  background-color: #676666;
+}
+.btn-mint--lightgray {
+  background-color: #ced6de;
+}
+.btn-mint--lightgray:hover {
+  background-color: #505050;
+}
+.btn-mint--big {
+  font-size: 32px;
+  width: 180px;
+}
+.btn-mint--small {
+  font-size: 19px;
+}
+.btn-mint:active {
+  background-color: #931919;
+}/*# sourceMappingURL=Button.css.map */

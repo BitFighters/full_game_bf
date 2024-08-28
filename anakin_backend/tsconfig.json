@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "lib": ["esnext"],
+    "target": "es6",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist/",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "preserveConstEnums": false,
+    "baseUrl": "./src",
+
+    "paths": {
+      "@services/*": ["services/*"],
+      "@config/*": ["config/*"],
+      "@models/*": ["models/*"],
+      "@api/*": ["api/*"],
+      "@components/*": ["api/components/*"],
+      "@assets/*": ["assets/*"],
+      "@utils/*": ["utils/*"],
+      "@public/*": ["public/*"],
+      "*": ["node_modules/*", "src/types/*"]
+    },
+
+    "plugins": [
+      { "transform": "ts-transformer-keys/transformer" }
+    ],
+  },
+  "include": ["src/**/*"]
+}

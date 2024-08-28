@@ -1,0 +1,67 @@
+@import "../../../assets/sass/mixins";
+@import "../../../assets/sass/variables";
+
+.mint-card {
+  &__form {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: left;
+    &__title {
+      margin-bottom: 5px;
+      margin-left: 2px;
+      height: 24px;
+      border: 1px solid #b9c1c6;
+      background-color: $white;
+      @include flexcenter;
+      span {
+        font-size: 22px;
+        color: $dark;
+      }
+    }
+    &__item {
+      margin-left: 8px;
+      label {
+        font-size: 22px;
+        color: $dark;
+      }
+      input[type="text"] {
+        padding: 0;
+        padding-left: 3px;
+        background-color: transparent;
+        outline: 0;
+        border: 0;
+        border-bottom: 3px solid $dark;
+        max-width: 120px;
+        font-family: "Cooper Black";
+        font-size: 22px;
+        color: $dark;
+      }
+      &--radio {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 5px;
+        label {
+          font-size: 17px;
+          margin-left: 5px;
+        }
+        input[type="radio"] {
+          position: relative;
+          z-index: -3;
+          display: none;
+        }
+        .radio-circle {
+          margin-left: 0;
+          margin-bottom: 3px;
+          display: block;
+          height: 20px;
+          width: 20px;
+          border: 3px solid $dark;
+          border-radius: 50%;
+        }
+        input[type="radio"]:checked ~ .radio-circle {
+          background-color: $dark;
+        }
+      }
+    }
+  }
+}

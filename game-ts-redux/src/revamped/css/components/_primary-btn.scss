@@ -1,0 +1,51 @@
+.primary-btn-component {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    &:first-child {
+      top: 7px;
+      left: 7px;
+    }
+
+    &:nth-child(2) {
+      top: 7px;
+      right: 7px;
+    }
+
+    &:nth-child(3) {
+      bottom: 7px;
+      right: 7px;
+    }
+
+    &:nth-child(4) {
+      bottom: 7px;
+      left: 7px;
+    }
+  }
+
+  .content {
+    height: 45px;
+    padding: 0 35px;
+    border: 3px solid #581e10;
+    background: url('./images/tile.webp');
+    background-repeat: repeat;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+}

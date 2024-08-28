@@ -1,0 +1,30 @@
+
+/* .container {
+  margin: 100px auto;
+  width: 500px;
+  text-align: center;
+} */
+ 
+.progress2 {
+  /* padding: 6px; */
+  border-radius: 30px;
+  height : 10px;
+  width: 260px;
+  overflow : hidden;
+  background-color: #363636;
+  z-index: 2;
+}
+
+.progress-bar2 {
+  width: 50%; 
+  height : 100%;
+  border-radius: 30px;
+  margin-left: -100%; 
+  background-color: #ff5b00;  
+  animation: progressAnimation 2s linear infinite;
+}
+
+@keyframes progressAnimation {
+  0%   { margin-left : -50%}
+  100% { margin-left : 120% }
+}

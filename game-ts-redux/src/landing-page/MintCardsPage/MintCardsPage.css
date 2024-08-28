@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .cards {
+  position: relative;
+  display: block;
+}
+.main .slime-img {
+  z-index: 5;
+}/*# sourceMappingURL=MintCardsPage.css.map */

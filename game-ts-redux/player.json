@@ -1,0 +1,24 @@
+{
+  "name": "",
+  "type": "Sprite",
+  "x": 400,
+  "y": 400,
+  "depth": 50400,
+  "scale": {
+      "x": 1.09375,
+      "y": 1.09375
+  },
+  "origin": {
+      "x": 0.5,
+      "y": 0.5
+  },
+  "flipX": false,
+  "flipY": false,
+  "rotation": 0,
+  "alpha": 1,
+  "visible": true,
+  "blendMode": 0,
+  "textureKey": "player",
+  "frameKey": "walk000.png",
+  "data": {}
+}

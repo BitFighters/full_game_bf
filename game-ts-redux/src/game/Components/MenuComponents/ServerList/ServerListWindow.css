@@ -1,0 +1,14 @@
+
+.list-wrapper {
+    display:flex;
+    justify-content: center;
+    position: relative;
+    width: 35%;
+    height: 100%;
+    opacity: 100%;
+    right: 0.4%;
+    background-color:#2d2a2a;
+    border-radius: 20px;
+    overflow: auto;
+}
+

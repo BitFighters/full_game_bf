@@ -1,0 +1,93 @@
+Selection Screen
+-Select player and server should display nicely on mobile devices and PC
+-A player may own 100s of fighters so they all must display nicely in a scrollable array
+
+
+
+Mobile game view
+-Mobile display should zoom out the entire game 50% to show more of the game area.
+-Header links should be redesigned for all mobile devices
+
+
+
+New player welcome message
+-remove button, touch or click anywhere to dismiss the message
+-welcome message displays nicely on all mobile devices
+
+
+
+Mobile controls UI
+-Joy stick and attack buttons should display nicely on mobile devices
+-Update mobile control assets to look great and fit the game style
+
+
+
+Fight/Bet menu
+hit the fight machine to activate.
+player sees fight and bet buttons
+-improve the look and make it look great on all mobile devices
+-improve fight info modal for all devices
+
+
+
+Brew machine menu
+-Players on mobile will need to see the selection of flavors they can purchase by tapping a logo on brew modal
+
+
+
+Player menu
+-tap/click player head in top right corner to access player menu
+All of the sub menus need to be formatted for mobile UI
+--Game
+--Stats
+--Log
+
+
+
+Fight Queue screen - player sub menu
+when 2 or more players are in the fight the queue tab shows the matchup
+-Make sure the fight queue fits mobile OK
+
+
+
+Fight Scene UI
+-players' faces and health bars and fight timer need to be mobile friendly
+-win receipt (modal shown to winning player) needs to be mobile friendly
+
+
+
+Jackpot screen
+There is a jackpot screen event that may launch after a player wins a fight
+-this needs formatted for mobile players
+
+
+
+Inventory bag
+-bag, coins and bits, in top left corner needs formatted for mobile
+when the bag is clicked/tapped, it opens to show player's inventory
+-this needs to be mobile friendly
+If a brew is tapped in the inventory, the player can select to equip or use it
+-this needs to be mobile friendly
+
+
+
+Use item UI
+when a brew is equipped, the player can tap this button on mobile to use it
+-this item box in the bottom center of screen needs to be mobile friendly
+-tap to use brew/item
+
+
+
+Chat UI for mobile
+-Players need to be able to chat on mobile devices too
+-chat icon to be mobile friendly
+-chat box to be mobile friendly
+-chat bubbles to be mobile friendly
+
+
+
+Mobile QA
+-make sure all mobile UIs work together
+for example, mobile controls (joy stick and attack buttons play nicely with chat buttons and item use button, etc)
+-make sure UI elements do not clash and overlap each other
+-ensure the entire mobile experience is solid and the game plays just as well on mobile as it does on web

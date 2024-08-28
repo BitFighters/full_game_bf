@@ -1,0 +1,14 @@
+// mixins
+@mixin mintcardborder {
+  @content;
+  border: 10px solid transparent;
+  margin-bottom: 8px;
+  border-image: url('../../assets/images/display-border.png') 10 round;
+}
+
+@mixin flexcenter {
+  @content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

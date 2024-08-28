@@ -1,0 +1,101 @@
+.faq-component {
+  width: 100%;
+
+  .faq-top {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .dot {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+
+      &:first-child {
+        top: 7px;
+        left: 7px;
+      }
+
+      &:nth-child(2) {
+        top: 7px;
+        right: 7px;
+      }
+
+      &:nth-child(3) {
+        bottom: 7px;
+        right: 7px;
+      }
+
+      &:nth-child(4) {
+        bottom: 7px;
+        left: 7px;
+      }
+    }
+
+    .content {
+      padding: 12px 35px;
+      border: 3px solid #54261b;
+      background: linear-gradient(rgba(4, 10, 22, 0.5), rgba(4, 10, 22, 0.5)), url('./images/tile.webp');
+      background-repeat: repeat;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
+
+      @media only screen and (max-width: 768px) {
+        padding: 12px 20px;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 22px;
+
+        @media only screen and (max-width: 768px) {
+          font-size: 10px;
+          line-height: 20px;
+        }
+      }
+
+      button {
+        display: flex;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+
+  &.active .faq-top .content button {
+    transform: rotate(180deg);
+  }
+
+  .faq-bottom {
+    padding: 20px 37px;
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+      padding: 20px 22px;
+    }
+
+    p {
+      font-size: 10px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.75);
+
+      @media only screen and (max-width: 768px) {
+        font-size: 9px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &.active .faq-bottom {
+    display: block;
+  }
+}

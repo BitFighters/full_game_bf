@@ -1,0 +1,65 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gamebits-dev-140312-authRole",
+      "UnauthRoleArn": "arn:aws:iam::578074962452:role/amplify-gamebits-dev-140312-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::578074962452:role/amplify-gamebits-dev-140312-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-gamebits-dev-140312-deployment",
+      "UnauthRoleName": "amplify-gamebits-dev-140312-unauthRole",
+      "StackName": "amplify-gamebits-dev-140312",
+      "StackId": "arn:aws:cloudformation:ap-south-1:578074962452:stack/amplify-gamebits-dev-140312/0f496ba0-2b63-11ed-a47d-06a06b3655be",
+      "AmplifyAppId": "d25vknegiih6kb"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d25vknegiih6kb",
+          "type": "manual"
+        }
+      }
+    }
+  },
+  "labs": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gamebits-labs-173616-authRole",
+      "UnauthRoleArn": "arn:aws:iam::578074962452:role/amplify-gamebits-labs-173616-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::578074962452:role/amplify-gamebits-labs-173616-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-gamebits-labs-173616-deployment",
+      "UnauthRoleName": "amplify-gamebits-labs-173616-unauthRole",
+      "StackName": "amplify-gamebits-labs-173616",
+      "StackId": "arn:aws:cloudformation:ap-south-1:578074962452:stack/amplify-gamebits-labs-173616/d15a2eb0-2b80-11ed-8378-021264a5a2d4",
+      "AmplifyAppId": "d25vknegiih6kb"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d25vknegiih6kb",
+          "type": "manual"
+        }
+      }
+    }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gamebits-prod-175003-authRole",
+      "UnauthRoleArn": "arn:aws:iam::578074962452:role/amplify-gamebits-prod-175003-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::578074962452:role/amplify-gamebits-prod-175003-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-gamebits-prod-175003-deployment",
+      "UnauthRoleName": "amplify-gamebits-prod-175003-unauthRole",
+      "StackName": "amplify-gamebits-prod-175003",
+      "StackId": "arn:aws:cloudformation:ap-south-1:578074962452:stack/amplify-gamebits-prod-175003/be346100-2b82-11ed-8378-021264a5a2d4",
+      "AmplifyAppId": "d25vknegiih6kb"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d25vknegiih6kb",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
